@@ -56,7 +56,7 @@ pipeline {
                         sh 'git branch'
                         sh 'git config --list'
 
-                        sh "git remote set-url orgin https://${USER}:${PASS}@github.com/kornzhoudev/jenkins-app.git"
+                        sh "git remote set-url origin https://${USER}:${PASS}@github.com/kornzhoudev/jenkins-app.git"
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump${BUILD_NUMBER}"'
                         sh 'git push orgin HEAD:jenkins-jobs'
