@@ -1,37 +1,37 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage("test") {
             steps {
                 script {
-                    echo "Testing the application..."
-                    echo "Execting pipeline for brach $BRANCH_NAME"
+                    echo "Testing the app..."
+                    echo "Executing pipepline for branch $Branch_NAME"
+                }
             }
         }
-        stage("build") {
+        stage("build image") {
             when {
                 expression {
-                    BRANCH_NAME == 'main'
+                    BRANCH_NAME = 'main'
                 }
             }
             steps {
                 script {
-                    echo "1"
+                    echo "Building the app.."
                 }
             }
         }
         stage("deploy") {
             when {
                 expression {
-                    BRANCH_NAME == 'main'
+                    BRANCH_NAME = 'main'
                 }
             }
             steps {
                 script {
-                    echo "2"
+                    echo "deploy the app.."
                 }
             }
         }
-    }   
-}
+    }
 }
