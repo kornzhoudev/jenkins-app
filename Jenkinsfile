@@ -20,7 +20,7 @@ pipeline {
             }
             steps {
                 script {
-                    echo "Building the app.."
+                    echo "Building the application.."
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             }
             steps {
                 script {
-                    echo "deploy the app.."
+                    echo "deploy the application.."
                 }
             }
         }
