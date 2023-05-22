@@ -1,7 +1,4 @@
 #!/usr/bin/env groovy
-
-def gv
-
 pipeline {
     agent any
     tools {
@@ -31,7 +28,7 @@ pipeline {
         stage("deploy") {
             steps {
                 script {
-                    echo 'deploying the application.'
+                    echo 'deploying the application...'
                 }
             }
         }
