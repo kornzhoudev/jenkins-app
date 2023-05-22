@@ -52,10 +52,6 @@ pipeline {
                         sh 'git config --global user.email "kornzhou0602@gmail.com"'
                         sh 'git config --global user.name "korn"'
 
-                        sh 'git status'
-                        sh 'git branch'
-                        sh 'git config --list'
-
                         sh "git remote set-url origin https://${USER}:${PASS}@github.com/kornzhoudev/jenkins-app.git"
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump${BUILD_NUMBER}"'
