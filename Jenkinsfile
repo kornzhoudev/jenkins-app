@@ -1,8 +1,5 @@
 pipeline {
-    agent any
-    tools {
-        maven 'Maven'
-    }
+    agent none
     stages {
         stage("test") {
             steps {
