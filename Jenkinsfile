@@ -4,31 +4,34 @@ pipeline {
         maven 'Maven'
     }
     stages {
-        stage("init") {
+        stage("test") {
             steps {
                 script {
-                    gv = load "script.groovy"
-                }
+                    echo "Testing the application..."
+                    echo "Execting pipeline for brach $BRANCH_NAME"
             }
         }
-        stage("build jar") {
-            steps {
-                script {
-                    gv.buildJar()
+        stage("build") {
+            when {
+                expression {
+                    BRANCH_NAME == 'main'
                 }
             }
-        }
-        stage("build image") {
             steps {
                 script {
-                        gv.buildImage()
+                    echo "1"
                 }
             }
         }
         stage("deploy") {
+            when {
+                expression {
+                    BRANCH_NAME == 'main'
+                }
+            }
             steps {
                 script {
-                    gv.deployApp()
+                    echo "2"
                 }
             }
         }
