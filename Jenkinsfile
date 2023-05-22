@@ -49,8 +49,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'github-credential', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-                        sh 'git config user.email "kornzhou0602@gmail.com"'
-                        sh 'git config user.name "korn"'
+                        sh 'git config --global user.email "kornzhou0602@gmail.com"'
+                        sh 'git config --global user.name "korn"'
 
                         sh 'git status'
                         sh 'git branch'
@@ -59,7 +59,7 @@ pipeline {
                         sh "git remote set-url origin https://${USER}:${PASS}@github.com/kornzhoudev/jenkins-app.git"
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump${BUILD_NUMBER}"'
-                        sh 'git push orgin HEAD:jenkins-jobs'
+                        sh 'git push origin HEAD:jenkins-jobs'
                     }
                 }
             }
