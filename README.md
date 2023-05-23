@@ -149,4 +149,7 @@ pipeline {
     }
 }
 ```
+<img width="1247" alt="Screenshot 2023-05-23 at 2 27 00 pm" src="https://github.com/kornzhoudev/jenkins-app/assets/113150237/a8f36bd9-b396-4241-86e6-8b5412253d4a">
+<img width="1211" alt="Screenshot 2023-05-23 at 2 27 19 pm" src="https://github.com/kornzhoudev/jenkins-app/assets/113150237/14efc3e9-478a-4166-befd-546823c1a27d">
+<img width="1136" alt="Screenshot 2023-05-23 at 2 27 38 pm" src="https://github.com/kornzhoudev/jenkins-app/assets/113150237/e5e7326f-cf56-4c71-959e-67c527a9d446">
 
