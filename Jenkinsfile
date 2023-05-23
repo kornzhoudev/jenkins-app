@@ -15,14 +15,14 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    echo "Building the application"
+                    echo "Building the application..."
                 }
             }
         }
         stage("deploy") {
             steps {
                 script {
-                    echo "deploy the application"
+                    echo "deploy the application..."
                 }
             }
         }
