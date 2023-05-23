@@ -1,7 +1,7 @@
-###Complete CI/CD Pipeline with EKS and AWS ECR
-###Technologies used:
+### Complete CI/CD Pipeline with EKS and AWS ECR
+### Technologies used:
 Kubernetes, Jenkins, AWS EKS, AWS ECR, Java, Maven, Linux, Docker, Git
-###Project Description:
+### Project Description:
 
 1-Create private AWS ECR Docker repository
 
@@ -18,22 +18,22 @@ b. CI step: Build artifact for Java Maven application
 c. CI step: Build and push Docker image to AWS ECR
 
 d. CD step: Deploy new application version to EKS cluster e. CD step: Commit the version update
-###Instructions
-######Step 1: Install and configure Jenkins and docker on DigitalOcean Droplet Server
-######Step 2: Create AWS EKS cluster with Nodegroups on AWS
+### Instructions
+###### Step 1: Install and configure Jenkins and docker on DigitalOcean Droplet Server
+###### Step 2: Create AWS EKS cluster with Nodegroups on AWS
 > 1 Create Auto scaler for Nodegroup
-######Step 3: Create a AWS ECR private repository and push image to it
+###### Step 3: Create a AWS ECR private repository and push image to it
 > 1 Configure aws-repo-credential in Jenkins for docker login
 > 2 2 Configure secret component for Docker pull image from ECR
-######Step 4: Install gettext-base tool for envsubst on jenkins container server
+###### Step 4: Install gettext-base tool for envsubst on jenkins container server
 ```
 apt-get update
 ```
 ```
 apt-get install gettext-base
 ```
-######Step 5: Install AWS-IAM-Authenticator for authenticate kubectl interact with eks cluster
-######Step 6: Create Java app deployment and service component config file
+###### Step 5: Install AWS-IAM-Authenticator for authenticate kubectl interact with eks cluster
+###### Step 6: Create Java app deployment and service component config file
 
 ```
 apiVersion: apps/v1
@@ -74,7 +74,7 @@ spec:
       port: 80
       targetPort: 8080
 ```
-#####Step 7: Update the Deploy stage in Jenkinsfile
+##### Step 7: Update the Deploy stage in Jenkinsfile
 ```
 #!/usr/bin/env groovy
 pipeline {
