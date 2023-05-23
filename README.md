@@ -13,3 +13,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
+···
+      
