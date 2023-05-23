@@ -1,7 +1,7 @@
 # Complete CI/CD Pipeline with EKS and AWS ECR
 ## Technologies used
 ### Kubernetes, Jenkins, AWS EKS, AWS ECR, Java, Maven, Linux, Docker, Git
-···
+···java
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,5 +13,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-···
-      
+
